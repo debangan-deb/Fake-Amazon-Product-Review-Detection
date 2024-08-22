@@ -1,0 +1,127 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: url('../static/BG3.jpeg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    background-size: 1240px 580px;
+    }
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+}
+.form-box{
+    position: relative;
+    width: 400px;
+    font-size: larger;
+    height: 510px;
+    border: 2px solid rgba(255,255,2550.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, cyan, yellow);
+    animation: changeColor 6s linear infinite;
+}
+@keyframes changeColor {
+    0%, 33% {
+    background: linear-gradient(90deg, rgb(94, 255, 0), cyan);
+    }
+    34%, 66% {
+    background: linear-gradient(90deg, rgb(250, 165, 8), rgb(77, 236, 77)); /* Yellow */
+    }
+    67%, 100% {
+    background: linear-gradient(90deg, cyan, yellow); /* Neon */
+    }
+    }
+.form-box h2{
+    color:black;
+    text-align: center;
+    font-size:32px;
+}
+.form-box .input-box{
+    position: relative;
+    margin: 30px 0;
+    width:310px;
+    border-bottom: 2px solid black;
+
+}
+.form-box .input-box input{
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    border:none;
+    outline:none;
+    padding: 0 20px 0 5px;
+    color:black;
+    font-size: 16px;
+    font-weight: bolder;
+}
+i{
+    position: absolute;
+    color:black;
+    top: 13px;
+    right:0;
+}
+input::placeholder{
+    color:black;
+    font-size: large;
+}
+.btn{
+    color: #fff;
+    background: blue;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 17px;
+    border:none;
+    outline:none;
+    cursor: pointer;
+    font-size: large;
+    font-weight: bolder;
+    box-shadow: 3px 0 10px rgba(0,0,0,.5);
+}
+.group{
+    display: flex;
+    justify-content:space-between;
+}
+.group span a{
+    color:black;
+    position: relative;
+    top: 10px;
+    text-decoration: none;
+    font-weight: 500;
+    font-weight: bolder;
+}
+.group a:focus{
+    text-decoration: underline;
+}
+#result{
+    color: red;
+    font-weight: 600px;
+    position: relative;
+    top:25px;
+    font-weight:bolder;
+    font-size: large;
+    animation: blink 1s infinite, hide 1s forwards 10s;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+@keyframes hide {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+  }

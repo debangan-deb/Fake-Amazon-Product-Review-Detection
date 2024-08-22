@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Delete Account</title>
+    <link rel="stylesheet" href="../static/project.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-box">
+            <form action="/delete" name="Formfill" onsubmit="return validation()" method="post">
+                <h2>Delete Account</h2>
+                {% if error %}
+                   <p id="result">{{ error }}</p>
+                {% endif %}
+                <p id="result"></p>
+                <div class="input-box">
+                    <i class="bx bxs-lock-alt"></i>
+                    <input type="password" name="Password" placeholder="Confirm Your Password">
+                </div>
+                <div class="button">
+                    <input type="submit" class="btn" onclick="validation()" value="Delete Account Permenantly">
+                </div>
+                <div class="group">
+                    <span><a href="/link?logout=true">Logout</a></span>
+                    <span><a href="/link">Detect Reviews</a></span>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="../static/delete.js"></script>
+</body>
+
+</html>

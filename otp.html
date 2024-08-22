@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Email_OTP</title>
+    <link rel="stylesheet" href="../static/project.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <form action="/otp" name="Formfill" onsubmit="return validation()" method="post">
+                <h2>Reset Password</h2>
+                {% if error %}
+                  <p id="result">{{ error }}</p>
+                {% endif %}
+                <p id="result"></p>
+                <div class="input-box">
+                    <i class="bx bxs-user"></i>
+                    <input type="number" name="OTP" placeholder="Enter OTP">
+                </div>
+                <div class="button">
+                    <input type="submit" class="btn" onclick="validation()" value="Submit">
+                </div>
+                <div class="group">
+                    <span><a href="/register">Register</a></span>
+                    <span><a href="/login">Login</a></span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

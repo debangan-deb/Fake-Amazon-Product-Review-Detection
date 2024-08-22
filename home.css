@@ -1,0 +1,96 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color: #fff; 
+    font-family: 'Poppins', sans-serif; 
+}
+
+body {
+    background-image: url('../static/BG1.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+h1 {
+    font-size: 4em;
+    font-weight: 700;
+    margin: 0;
+    background: linear-gradient(to bottom, hsl(64, 94%, 48%), white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.tagline {
+font-family: 'Blithe', cursive;
+font-size: 1.1em;
+font-style: italic;
+color: yellow;
+overflow: hidden;
+white-space: nowrap;
+margin: 10px 0 10px;
+animation: changeColor 6s  infinite;
+
+}
+
+
+@keyframes changeColor {
+0%, 33% {
+color: hsl(123, 94%, 48%);
+}
+34%, 66% {
+color: yellow;
+font-weight: bolder;
+font-size: 25px;
+}
+67%, 100% {
+color: cyan; /* Neon */
+}
+}
+
+
+.button-container {
+    display: flex;
+    flex-direction: column; /* Adjust to a column layout */
+    align-items: center; /* Center align items horizontally */
+    gap: 10px;
+    margin-bottom: 10px; /* Adjusted margin to move the buttons up */
+ }
+
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(45deg, green, green);
+    color: #fff;
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #fd6608, #fd6608);
+}
+

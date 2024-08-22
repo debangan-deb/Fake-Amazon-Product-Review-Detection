@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>FauxSifter_Reset</title>
+    <link rel="stylesheet" href="../static/project.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-box">
+            <form action="/forgot" name="Formfill" onsubmit="return validation()" method="post">
+                <h2>Reset Password</h2>
+                {% if error %}
+                  <p id="result">{{error}}</p>
+                {% endif %}
+                <p id="result"></p>
+                <div class="input-box">
+                    <i class="bx bxs-user"></i>
+                    <input type="text" name="Username" placeholder="Username">
+                </div>
+                <div class="button">
+                    <input type="submit" class="btn" onclick="validation()" value="Send OTP on Email">
+                </div>
+                <div class="group">
+                    <span><a href="/register">Register</a></span>
+                    <span><a href="/login">Login</a></span>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script src="../static/forgot.js"></script>
+</body>
+
+</html>

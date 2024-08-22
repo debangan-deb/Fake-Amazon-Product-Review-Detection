@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Amazon Product Link</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../static/project.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-box">
+            <form action="/link" name="Formfill" onsubmit="return validation()" method="post">
+                <h2>Enter Amazon Product Link</h2>
+                {% if error %}
+                <p id="result">{{ error }}</p>
+                {% endif %}
+                <p id="result"></p>
+                <div class="input-box">
+                    <i class="bx bx-link"></i>
+                    <input type="text" name="Link" placeholder="Amazon Product Link">
+                </div>
+                <div class="button">
+                    <input type="submit" class="btn" name="download" onclick="validation()" value="Download">
+                </div>
+                <div class="group" style="justify-content: space-between;">
+                    <span><a href="/link?logout=true">Logout</a></span>
+                    <span><a href="/delete">Delete Account</a></span>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="../static/link.js"></script>
+</body>
+
+</html>
